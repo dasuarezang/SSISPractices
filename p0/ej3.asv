@@ -1,0 +1,27 @@
+%presentacio
+
+[x,fm] = audioread('presentacio.mp3');
+
+%El senyal té 1.456.752 mostres
+    
+maxim = max(x);
+mitjana = mean(x);
+minim = min(x);
+
+%maxim=1; mitjana=-1,36*10^-4; minim=-1
+
+energia = sum(abs(x).^2);
+
+%energia=3,2556*10^4
+
+%La frequencia de mostratge (fm) és 48.000hz
+
+T=length(x)/fm;
+
+%La duracio del senyal es T=30,3490s
+
+sound(x, fm);
+
+%El audio s'escolta correctament, e.
+
+plot(x,fm)

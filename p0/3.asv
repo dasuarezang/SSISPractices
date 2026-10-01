@@ -1,0 +1,4 @@
+%presentacio
+
+[x,fm] = audioread('presentacio.mp3');
+
